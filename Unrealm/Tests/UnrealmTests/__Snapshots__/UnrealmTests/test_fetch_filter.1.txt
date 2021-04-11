@@ -1,0 +1,14 @@
+▿ 1 element
+  ▿ Thing
+    - date: 1970-01-01T00:00:00Z
+    - double: 2.5
+    - id: "2"
+    - integer: 1
+    ▿ optionalDate: Optional<Date>
+      - some: 1970-01-01T00:01:40Z
+    ▿ optionalDouble: Optional<Double>
+      - some: 4.5
+    ▿ optionalInt: Optional<Int>
+      - some: 3
+    ▿ optionalString: Optional<String>
+      - some: "Hello"

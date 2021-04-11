@@ -7,7 +7,7 @@
 
 #import <objc/runtime.h>
 #import "Object+Unrealm.h"
-@import RealmSwift.Swift;
+//@import RealmSwift.Swift;
 @import Realm;
 
 @implementation RealmSwiftObject (Unrealm)
