@@ -46,7 +46,7 @@ struct Thing: Realmable, Equatable {
 
 struct Parent: Realmable {
     var id: String = ""
-    var thing: Thing!
+    var thing: Thing?
     var otherThings: [Thing] = []
 
 
@@ -132,6 +132,23 @@ final class UnrealmTests: XCTestCase {
         var thing = realm.object(ofType: Thing.self, forPrimaryKey: "id")!
 
         thing.optionalString = "Updated"
+        try! realm.write {
+            realm.add(thing, update: .all)
+        }
+        let objects = realm.dynamicObjects("RLMThing")
+        assertSnapshot(matching: Array(objects), as: .dump)
+    }
+
+
+    func test_update_value_to_nil() {
+        try! realm.write {
+            realm.add(Thing(optionalString: "original"), update: .all)
+        }
+
+        var thing = realm.object(ofType: Thing.self, forPrimaryKey: "id")!
+        XCTAssertEqual(thing.optionalString, "original")
+
+        thing.optionalString = nil
         try! realm.write {
             realm.add(thing, update: .all)
         }
@@ -287,7 +304,7 @@ final class UnrealmTests: XCTestCase {
             realm.add(parent, update: .all)
         }
 
-        parent.thing.optionalString = "updated"
+        parent.thing?.optionalString = "updated"
         parent.otherThings[0].optionalString = "other updated"
 
         try! realm.write {
