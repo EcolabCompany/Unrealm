@@ -6,6 +6,7 @@
 //  
 //
 
+#import <objc/NSObject.h>
 #ifndef Object_Unrealm_h
 #define Object_Unrealm_h
 

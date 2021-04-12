@@ -10,9 +10,9 @@ import Foundation
 import Realm
 import RealmSwift
 
-#if canImport(UnrealmObjC)
-import UnrealmObjC
-#endif
+//#if canImport(UnrealmObjC)
+//import UnrealmObjC
+//#endif
 
 public struct AnyResults: RandomAccessCollection {
 	public typealias Element = Realmable
@@ -25,23 +25,23 @@ public struct AnyResults: RandomAccessCollection {
 	}
 
 	public func index(after i: Int) -> Int {
-		return rlmResult.index(after: i)
+        rlmResult.index(after: i)
 	}
 
 	public var startIndex: Index {
-		return rlmResult.startIndex
+        rlmResult.startIndex
 	}
 
 	public var endIndex: Index {
-		return rlmResult.endIndex
+        rlmResult.endIndex
 	}
 
 	public var last: Element? {
-		return rlmResult.last?.toRealmable() as? Element
+        rlmResult.last?.toRealmable() as? Element
 	}
 
 	public var count: Int {
-		return rlmResult.count
+        rlmResult.count
 	}
 
 	internal let rlmResult: RealmSwift.Results<Object>
@@ -64,7 +64,7 @@ public struct AnyResults: RandomAccessCollection {
 	}
 
 	public func toArray() -> Array<Realmable> {
-		return rlmResult.compactMap({$0.toRealmable() as? Realmable})
+        rlmResult.compactMap({ $0.toRealmable() as? Realmable })
 	}
 }
 

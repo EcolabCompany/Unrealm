@@ -1,0 +1,53 @@
+▿ 1 element
+  - RLMParent {
+	__nilProperties = RLMArray<string> <> (
+	
+	);
+	id = parent;
+	thing = RLMThing {
+		__nilProperties = RLMArray<string> <> (
+			[0] optionalInt,
+			[1] optionalDouble,
+			[2] optionalDate
+		);
+		id = id;
+		integer = 1;
+		double = 2.5;
+		optionalString = updated;
+		optionalInt = (null);
+		optionalDouble = (null);
+		date = 1970-01-01 00:00:00 +0000;
+		optionalDate = (null);
+	};
+	otherThings = RLMArray<RLMThing> <> (
+		[0] RLMThing {
+			__nilProperties = RLMArray<string> <> (
+			
+			);
+			id = 2;
+			integer = 1;
+			double = 2.5;
+			optionalString = other updated;
+			optionalInt = 3;
+			optionalDouble = 4.5;
+			date = 1970-01-01 00:00:00 +0000;
+			optionalDate = 1970-01-01 00:01:40 +0000;
+		},
+		[1] RLMThing {
+			__nilProperties = RLMArray<string> <> (
+				[0] optionalString,
+				[1] optionalInt,
+				[2] optionalDouble,
+				[3] optionalDate
+			);
+			id = 3;
+			integer = 1;
+			double = 2.5;
+			optionalString = (null);
+			optionalInt = (null);
+			optionalDouble = (null);
+			date = 1970-01-01 00:00:00 +0000;
+			optionalDate = (null);
+		}
+	);
+}

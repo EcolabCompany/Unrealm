@@ -10,7 +10,7 @@
 import Foundation
 import RealmSwift
 import Realm
-import RuntimeNew
+import Runtime
 
 public typealias Realm = RealmSwift.Realm
 public typealias NotificationToken = RealmSwift.NotificationToken
@@ -382,6 +382,7 @@ public extension Object {
 	}
 
 	func toRealmable() -> RealmableBase? {
+        // Should be able to useString(describing: type(of: self))
 		let objTypeString = self.typeString() ?? ""
 		if let type = objectsAndRealmables.filter({objTypeString.contains($0.key)}).map({($0, $1)}).sorted(by: {$0.0 > $1.0}).first?.1 {
 			let convertedObj = self.toRealmable(of: type)

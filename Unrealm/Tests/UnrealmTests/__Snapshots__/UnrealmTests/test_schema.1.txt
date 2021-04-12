@@ -1,0 +1,202 @@
+▿ Schema {
+	RLMParent {
+		__nilProperties {
+			type = string;
+			indexed = NO;
+			isPrimary = NO;
+			array = YES;
+			optional = YES;
+		}
+		id {
+			type = string;
+			indexed = YES;
+			isPrimary = YES;
+			array = NO;
+			optional = YES;
+		}
+		thing {
+			type = object;
+			objectClassName = RLMThing;
+			linkOriginPropertyName = (null);
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+		otherThings {
+			type = object;
+			objectClassName = RLMThing;
+			linkOriginPropertyName = (null);
+			indexed = NO;
+			isPrimary = NO;
+			array = YES;
+			optional = NO;
+		}
+	}
+	RLMThing {
+		__nilProperties {
+			type = string;
+			indexed = NO;
+			isPrimary = NO;
+			array = YES;
+			optional = YES;
+		}
+		id {
+			type = string;
+			indexed = YES;
+			isPrimary = YES;
+			array = NO;
+			optional = YES;
+		}
+		integer {
+			type = int;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = NO;
+		}
+		double {
+			type = double;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = NO;
+		}
+		optionalString {
+			type = string;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+		optionalInt {
+			type = int;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+		optionalDouble {
+			type = double;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+		date {
+			type = date;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+		optionalDate {
+			type = date;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+	}
+}
+  - rlmSchema: Schema {
+	RLMParent {
+		__nilProperties {
+			type = string;
+			indexed = NO;
+			isPrimary = NO;
+			array = YES;
+			optional = YES;
+		}
+		id {
+			type = string;
+			indexed = YES;
+			isPrimary = YES;
+			array = NO;
+			optional = YES;
+		}
+		thing {
+			type = object;
+			objectClassName = RLMThing;
+			linkOriginPropertyName = (null);
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+		otherThings {
+			type = object;
+			objectClassName = RLMThing;
+			linkOriginPropertyName = (null);
+			indexed = NO;
+			isPrimary = NO;
+			array = YES;
+			optional = NO;
+		}
+	}
+	RLMThing {
+		__nilProperties {
+			type = string;
+			indexed = NO;
+			isPrimary = NO;
+			array = YES;
+			optional = YES;
+		}
+		id {
+			type = string;
+			indexed = YES;
+			isPrimary = YES;
+			array = NO;
+			optional = YES;
+		}
+		integer {
+			type = int;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = NO;
+		}
+		double {
+			type = double;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = NO;
+		}
+		optionalString {
+			type = string;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+		optionalInt {
+			type = int;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+		optionalDouble {
+			type = double;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+		date {
+			type = date;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+		optionalDate {
+			type = date;
+			indexed = NO;
+			isPrimary = NO;
+			array = NO;
+			optional = YES;
+		}
+	}
+}
